@@ -4,43 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUKHI</title>
+    <meta name="description" content="Página oficial de Bukhi. Conoce al artista y descubre su música.">
+    <title>BUKHI | Página oficial</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- INICIO -->
-    <section class="hero" id="inicio">
+    <!-- SECCIÓN PRINCIPAL -->
+    <header class="hero" id="inicio" aria-label="Inicio de Bukhi">
 
         <main class="container">
+
             <h1>BUKHI</h1>
 
-            <a href="canciones.html" class="button">
-                Mis Canciones
-            </a>
+            <nav aria-label="Navegación principal">
 
-            <a href="#sobre-mi" class="button">
-                Sobre mí
-            </a>
+                <a href="canciones.html"
+                   class="button"
+                   aria-label="Ir a Mis Canciones">
+                    Mis Canciones
+                </a>
+
+                <a href="#sobre-mi"
+                   class="button"
+                   aria-label="Conocer más sobre Bukhi">
+                    Sobre mí
+                </a>
+
+            </nav>
+
         </main>
 
-    </section>
+    </header>
 
-    <!-- SOBRE MÍ -->
-    <section class="about-section" id="sobre-mi">
+
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section class="about-section"
+             id="sobre-mi"
+             aria-labelledby="titulo-sobre-mi">
 
         <div class="about-content">
 
+            <!-- FOTOGRAFÍA -->
             <div class="about-image">
-                <img src="foto.jpeg" alt="Fotografía de BUKHI">
+
+                <img
+                    src="foto.jpeg"
+                    alt="Fotografía de Bukhi, artista musical."
+                    title="Foto de Bukhi"
+                    loading="lazy"
+                >
+
             </div>
 
+            <!-- DESCRIPCIÓN -->
             <div class="about-text">
-                <h2>Sobre Mi:</h2>
+
+                <h2 id="titulo-sobre-mi">
+                    Sobre Mí
+                </h2>
 
                 <p>
-                    Joven artista de la ciudad de Cali, llevo creando música desde los 15 años, aunque no me decidí a hacerla real hasta los 19
+                    AQUÍ VA TU DESCRIPCIÓN.
+                    Cuéntale al mundo quién eres,
+                    qué haces y qué te inspira.
                 </p>
+
             </div>
 
         </div>

@@ -278,3 +278,13 @@ body {
     white-space: nowrap;
     z-index: 2;
 }
+
+
+/* EFECTO DE ZOOM EN LA FOTO */
+.about-image img {
+    transition: transform 0.35s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
