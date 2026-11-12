@@ -1,0 +1,280 @@
+
+/* FUENTES */
+
+/* Achiko: coloca aquí el archivo de tu tipografía */
+@font-face {
+    font-family: 'Achiko';
+    src: url('fonts/Achiko.woff2') format('woff2');
+    font-weight: normal;
+}
+
+/* Sour Gummy */
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(
+        ellipse at center,
+        #9e456d 0%,
+        #59263f 35%,
+        #1b1017 70%,
+        #000000 100%
+    );
+
+    font-family: 'Sour Gummy', sans-serif;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Achiko', sans-serif;
+    font-size: clamp(35px, 7vw, 75px);
+    font-weight: normal;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 30px rgba(255,255,255,0.15);
+}
+
+.button {
+    font-family: 'Sour Gummy', sans-serif;
+    text-decoration: none;
+    color: white;
+    background: black;
+    border: 1px solid black;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: #252525;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.coming-soon {
+    font-family: 'Sour Gummy', sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+
+.page-title {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: 'Achiko', sans-serif;
+    font-size: clamp(25px, 5vw, 55px);
+    letter-spacing: 4px;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+/* DESPLAZAMIENTO SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: block;
+}
+
+/* SECCIÓN INICIAL */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .container {
+    gap: 25px;
+}
+
+.hero h1 {
+    font-family: 'Achiko', sans-serif;
+    color: white;
+}
+
+/* BOTONES */
+.hero .button {
+    min-width: 190px;
+    text-align: center;
+}
+
+/* SECCIÓN SOBRE MÍ */
+.about-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 8%;
+}
+
+.about-content {
+    width: 100%;
+    max-width: 1050px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+}
+
+/* FOTOGRAFÍA */
+.about-image {
+    flex: 1;
+    max-width: 430px;
+}
+
+.about-image img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+/* TEXTO */
+.about-text {
+    flex: 1;
+    color: white;
+}
+
+.about-text h2 {
+    font-family: 'Achiko', sans-serif;
+    font-size: clamp(35px, 5vw, 65px);
+    margin-bottom: 25px;
+    color: white;
+}
+
+.about-text p {
+    font-family: 'Sour Gummy', sans-serif;
+    font-size: 19px;
+    line-height: 1.8;
+    color: white;
+}
+
+/* VERSIÓN CELULAR */
+@media (max-width: 700px) {
+
+    .about-section {
+        padding: 70px 25px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 42px;
+    }
+
+    .about-text p {
+        font-size: 17px;
+    }
+}
+
+
+/* BOTONES UNO AL LADO DEL OTRO */
+.hero .container {
+    gap: 25px;
+}
+
+.hero .container h1 {
+    margin-bottom: 5px;
+}
+
+.hero .container .button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 160px;
+}
+
+/* AGRUPAR BOTONES */
+.hero .container {
+    position: relative;
+}
+
+.hero .container .button {
+    margin: 0;
+}
+
+/* DISTRIBUCIÓN HORIZONTAL */
+.hero .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hero .container h1 {
+    flex-basis: 100%;
+}
+
+
+/* CORRECCIÓN PÁGINA CANCIONES */
+
+.canciones-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    padding: 20px;
+}
+
+.page-title {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: 'Achiko', sans-serif;
+    font-size: clamp(25px, 5vw, 55px);
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 2;
+}
