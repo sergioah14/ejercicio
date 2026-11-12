@@ -280,11 +280,20 @@ body {
 }
 
 
-/* EFECTO DE ZOOM EN LA FOTO */
-.about-image img {
-    transition: transform 0.35s ease;
+
+/* ZOOM AL PASAR EL MOUSE SOBRE LA FOTO */
+.about-image {
+    position: relative;
+    overflow: visible;
 }
 
-.about-image img:hover {
-    transform: scale(1.05);
+.about-image img {
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease-in-out !important;
+    transform: scale(1);
+}
+
+.about-image:hover img {
+    transform: scale(1.06) !important;
 }
